@@ -1,2 +1,1 @@
-# site
-https://rafaelramosaraujo.github.io/site/
+https://rafaelramosaraujo.github.io/site
