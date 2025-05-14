@@ -1,3 +1,195 @@
-body{
-    background-color: blue;
+/*
+##fffdff branco
+#dddadd cinza claro
+#bab8ba cinza escuro
+#757375 cinza escuro
+#595959 cinza
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
+
+h1{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+h2{
+    margin-left: 20px;
+}
+
+p{
+    margin-left: 10px;
+}
+
+ .container{
+    margin: auto;
+    padding: 10px;
+ }
+
+ h1, h2, p {
+   color: #ffffff;
+ }
+
+body{
+    background-color: #595959;
+}
+
+main{
+   background-color: #595959;
+}
+header{
+    background-color: #0a0908;
+    padding: 15px 15px 15px 15px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000 ;
+}
+
+.logo{
+    width: 19%;
+ }
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li{
+    margin-left: 20px;
+}
+
+nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+}
+ a:hover{
+    color: #fffdff;
+    background-color:#bab8ba ;
+ }
+
+ header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+
+ .per1, .per2, .per3{
+    margin-left: 20px;
+ }
+
+ #inicio{
+    margin-top: 130px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff ;
+    text-shadow: 2px 2px 5px #000000;
+ }
+
+ .banner{
+    background: url("../img/tlou_banner.png")  no-repeat center/cover;
+    height: 400px;
+
+ }
+
+ section{
+   scroll-margin-top: 120px;
+ }
+
+ #sobre{
+    padding: 35px;
+    background-color:  #595959;
+    color: #757375
+ }
+
+ .sobre-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: auto;
+ }
+
+ .sobre-texto{
+    flex: 1;
+    padding: 20px;
+ }
+
+ .sobre-texto h1{
+    font-size: 1.5;
+    margin-bottom: 20px;
+ }
+
+ .sobre-texto p{
+    font-size: 1;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+ }
+
+ .sobre-texto h2{
+    margin-top: 20px;
+ }
+
+ .hex-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    flex: 1;
+ }
+
+ .hex{
+    width: 140px;
+    height: 120px;
+    clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+    overflow: hidden;
+    background-color: #757375;
+    position: relative;
+ }
+ 
+ .hex img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ @media (max-width: 675px){
+    header .container, .sobre-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul{
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    #inicio{
+        margin-top: 160px;
+    }
+
+    .logo{
+        width: 30%;
+        height: 10%;
+    }
+
+    .banner{
+        height: 650px;
+     }
+
+ }
+
+ 
