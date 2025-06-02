@@ -211,6 +211,31 @@ padding: 50px 0;
  }
 
  #acao .item:hover {
-   transform: translateY();
+   transform: translateY(-5px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
  }
  
+ #acao .item:active {
+   transform: scale(0.98);
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+ }
+
+ #acao .item p {
+   margin-top: 15px;
+   font-size: 0.98em;
+   color: #000000;
+ }
+
+ #acao .imagem img {
+   width: 100%;
+   max-width: 150px;
+   height: auto;
+   margin-bottom: 10px;
+ }
+
+ /*modal*/
+ .card{
+   background: white;
+   padding: 20px;
+   
+ }
