@@ -193,11 +193,11 @@ nav ul li a{
  }
 
  #acao .container {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 20px;
-text-align: center;
-padding: 50px 0;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 20px;
+   text-align: center;
+   padding: 50px 0;
  }
 
  #acao .item {
@@ -220,7 +220,7 @@ padding: 50px 0;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
  }
 
- #acao .item p {
+ #acao .item, .text-card {
    margin-top: 15px;
    font-size: 0.98em;
    color: #000000;
@@ -234,8 +234,63 @@ padding: 50px 0;
  }
 
  /*modal*/
- .card{
+ .card {
    background: white;
    padding: 20px;
-   
+   border-radius: 12px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   max-width: 300px;
+   margin: auto;
+   text-align: center;
  }
+
+ .card h3{
+   margin-top: 0;
+ }
+
+ .btn {
+   display: inline-block;
+   margin-top: 15px;
+   padding: 10px 20px;
+   background: #007bff;
+   color: white;
+   text-decoration: none;
+   border-radius: 6px;
+   cursor: pointer;
+ }
+
+ /*Modal*/
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.6);
+   display: none;
+   justify-content: center;
+   align-items: center;
+}
+
+.modal:target {
+   display: flex;
+}
+
+.modal-content {
+   background: white;
+   padding: 30px;
+   border-radius: 10px;
+   max-width: 400px;
+   text-align: center;
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+   margin-top: 20px;
+   display: inline-block;
+   padding: 8px 16px;
+   background: #dc3545;
+   color: white;
+   border-radius: 6px;
+   text-decoration: none;
+}
