@@ -17,14 +17,17 @@
 h1{
     font-size: 30px;
     margin-left: 20px;
+    font-family: "Noto Sans", sans-serif;
 }
 
 h2{
     margin-left: 20px;
+    font-family: "Noto Sans", sans-serif;
 }
 
 p{
     margin-left: 10px;
+    font-family: "Noto Sans", sans-serif;
 }
 
  .container{
@@ -70,6 +73,7 @@ nav ul li{
 nav ul li a{
     color: #ffffff;
     text-decoration: none;
+    font-family: "Noto Sans", sans-serif;
 }
  a:hover{
     color: #fffdff;
@@ -99,7 +103,7 @@ nav ul li a{
 
  .banner{
     background: url("../img/tlou_banner.png")  no-repeat center/cover;
-    height: 400px;
+    height: 500px;
 
  }
 
@@ -208,6 +212,7 @@ nav ul li a{
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    transition: 0.2s ease, box-shadow 0.2s ease;
    cursor: pointer;
+
  }
 
  #acao .item:hover {
@@ -224,6 +229,7 @@ nav ul li a{
    margin-top: 15px;
    font-size: 0.98em;
    color: #000000;
+   font-family: "Noto Sans", sans-serif;
  }
 
  #acao .imagem img {
