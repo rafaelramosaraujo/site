@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Noto Sans", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -75,9 +75,11 @@ nav ul li a{
     text-decoration: none;
     font-family: "Noto Sans", sans-serif;
 }
- a:hover{
-    color: #fffdff;
+ nav a:hover{
+    color: #0a0908;
     background-color:#bab8ba ;
+    padding: 5px;
+    border-radius: 7%;
  }
 
  header .container{
@@ -201,7 +203,7 @@ nav ul li a{
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    gap: 20px;
    text-align: center;
-   padding: 50px 0;
+   padding: 50px 0 0;
  }
 
  #acao .item {
@@ -239,6 +241,12 @@ nav ul li a{
    margin-bottom: 10px;
  }
 
+ #acao {
+   margin-left: 30px;
+   margin-right: 30px;
+   scroll-margin-top: 190px;
+ }
+
  /*modal*/
  .card {
    background: white;
@@ -263,6 +271,13 @@ nav ul li a{
    text-decoration: none;
    border-radius: 6px;
    cursor: pointer;
+ }
+
+ .imagemcard img {
+   width: 100%;
+   max-width: 400px;
+   height: auto;
+   margin-bottom: 10px;
  }
 
  /*Modal*/
@@ -299,4 +314,32 @@ nav ul li a{
    color: white;
    border-radius: 6px;
    text-decoration: none;
+}
+
+.imggaleria img {
+   width: 100%; 
+   height: auto;  
+}
+
+.galeria_img {
+   display: grid; 
+   grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));; 
+   gap: 20px; 
+   max-width: 80%; 
+   margin: 0 auto; 
+}
+
+#galeria h1 {
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   padding: 5%;
+   scroll-margin-top: 190px;
+}
+
+@media (max-width: 675px){
+   .galeria_img {
+      display: flex;
+      flex-direction: column;
+   }
 }
