@@ -109,6 +109,11 @@ nav ul li a{
 
  }
 
+ .banner2 {
+    background: url("../img/tlou_banner2.jpg")  no-repeat center/cover;
+    height: 500px;
+ }
+
  section{
    scroll-margin-top: 120px;
  }
@@ -148,6 +153,44 @@ nav ul li a{
  .sobre-texto h2{
     margin-top: 20px;
  }
+
+ .contato-t {
+   text-align: center;
+   display: grid;
+   border-radius: 10px;
+   background-color: #f2f2f2;
+   padding: 20px 80px 20px 80px;
+   
+ }
+
+ .contato-t h1 {
+   color: #000000;
+ }
+ input[type=text], input[type=date], input[type=email], select {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+
+ }
+
+ input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
 
  .fonte {
    text-align: justify;
