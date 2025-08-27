@@ -1,0 +1,151 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante que a página seja responsiva e se ajuste à largura do dispositivo -->
+    <title>THE LAST OF US - Jogo</title> <!-- Define o título que aparece na aba do navegador -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Linka o arquivo de folha de estilos CSS externo -->
+    <link rel="shortcut icon" href="img/last-of-us-fireflies-logo-png_seeklogo-248946-removebg-preview.png" type="image/x-icon"> <!-- Define o ícone (favicon) da página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Pré-conecta ao servidor de fontes do Google para otimização -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Pré-conecta ao servidor de fontes do Google com credenciais cruzadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!-- Importa a fonte 'Noto Sans' do Google Fonts -->
+</head>
+<body>
+    <!-- O cabeçalho é consistente com o resto do site para manter a identidade visual -->
+    <header> <!-- Início da seção do cabeçalho -->
+        <div class="container"> <!-- Container para alinhar o conteúdo do cabeçalho -->
+            <div class="logo"> <!-- Div para o logotipo do site -->
+               <img class="logo" src="img/tlou_LOGO.png" alt="Logo do The Last of Us"> <!-- Imagem do logotipo com texto alternativo -->
+            </div>
+            <nav> <!-- Seção de navegação -->
+                <ul> <!-- Lista não ordenada para os links do menu -->
+                    <li><a href="index.html"> Início </a></li> <!-- Link para a página inicial -->
+                    <li><a href="index.html#sobre"> O que é TLOU </a></li> <!-- Link para a seção 'Sobre' na página inicial -->
+                    <li><a href="index.html#acao"> Personagens </a></li> <!-- Link para a seção 'Personagens' na página inicial -->
+                    <li><a href="index.html#galeria"> Galeria </a></li> <!-- Link para a seção 'Galeria' na página inicial -->
+                    <li><a href="contato.html"> Contato </a></li> <!-- Link para a página de contato -->
+                    <li><a href="jogo.html"> Jogo </a></li> 
+                </ul> <!-- Fim da lista de navegação -->
+            </nav> <!-- Fim da seção de navegação -->
+        </div> <!-- Fim do container do cabeçalho -->
+    </header> <!-- Fim da seção do cabeçalho -->
+
+    <main class="jogo_m"> <!-- Conteúdo principal da página -->
+        <section id="game-section"> <!-- Seção dedicada ao jogo -->
+            <div class="game-instructions"> <!-- Div para as instruções do jogo -->
+                <h1>Jogo de Associação</h1> <!-- Título da seção do jogo -->
+                <p>Arraste cada palavra para a caixa da categoria correta!</p> <!-- Parágrafo com as instruções -->
+            </div> <!-- Fim da div de instruções -->
+            
+            <!-- A área principal do jogo usa position: relative para que os elementos internos com position: absolute se posicionem em relação a ela -->
+            <div class="game-area"> <!-- Container principal da área do jogo -->
+
+                <!-- Container do título centralizado -->
+                <div class="game-title-container"> <!-- Div para o título central do jogo -->
+                    <h2>Quiz sobre The Last of Us</h2> <!-- Título do quiz -->
+                </div> <!-- Fim da div do título -->
+
+                <!-- Containers de categoria (caixas de destino) -->
+                <div id="personagens-box" class="category-box top-left" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="personagem"><h3>Personagens</h3></div>
+                <div id="infectados-box" class="category-box top-right" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="infectado"><h3>Infectados</h3></div>
+                <div id="locais-box" class="category-box bottom-left" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="local"><h3>Locais</h3></div>
+                <div id="faccoes-box" class="category-box bottom-right" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="faccao"><h3>Facções</h3></div>
+            </div> <!-- Fim do container principal do jogo -->
+
+            <!-- Palavras arrastáveis -->
+            <div id="words-container" class="words-container">
+                <p id="word1" class="word-item" draggable="true" ondragstart="drag(event)" data-category="personagem">Ellie Williams</p>
+                <p id="word2" class="word-item" draggable="true" ondragstart="drag(event)" data-category="infectado">Estalador</p>
+                <p id="word3" class="word-item" draggable="true" ondragstart="drag(event)" data-category="local">Boston</p>
+                <p id="word4" class="word-item" draggable="true" ondragstart="drag(event)" data-category="faccao">Vagalumes</p>
+                <p id="word5" class="word-item" draggable="true" ondragstart="drag(event)" data-category="personagem">Joel Miller</p>
+                <p id="word6" class="word-item" draggable="true" ondragstart="drag(event)" data-category="infectado">Baiacu</p>
+                <p id="word7" class="word-item" draggable="true" ondragstart="drag(event)" data-category="local">Salt Lake City</p>
+                <p id="word8" class="word-item" draggable="true" ondragstart="drag(event)" data-category="faccao">WLF (Lobos)</p>
+                <p id="word9" class="word-item" draggable="true" ondragstart="drag(event)" data-category="personagem">Abby</p>
+                <p id="word10" class="word-item" draggable="true" ondragstart="drag(event)" data-category="infectado">Corredor</p>
+                <p id="word11" class="word-item" draggable="true" ondragstart="drag(event)" data-category="local">Jackson</p>
+                <p id="word12" class="word-item" draggable="true" ondragstart="drag(event)" data-category="faccao">Serafitas</p>
+                <p id="word13" class="word-item" draggable="true" ondragstart="drag(event)" data-category="personagem">Dina</p>
+                <p id="word14" class="word-item" draggable="true" ondragstart="drag(event)" data-category="local">Seattle</p>
+                <p id="word15" class="word-item" draggable="true" ondragstart="drag(event)" data-category="infectado">Trôpego</p>
+                <p id="word16" class="word-item" draggable="true" ondragstart="drag(event)" data-category="faccao">Caçadores</p>
+            </div> <!-- Fim do container de palavras -->
+
+            <div id="feedback-message" class="feedback-message"></div>
+        </section>
+
+        <!-- TELA DE VITÓRIA (NOVO ELEMENTO) -->
+        <!-- Este container fica por cima de toda a página e está escondido por padrão (display: none no CSS) -->
+        <div id="win-screen" class="win-screen-overlay"> <!-- O container principal da tela de vitória -->
+            <div class="win-content"> <!-- A caixa de conteúdo que aparecerá no centro -->
+                <h2>Parabéns!</h2> <!-- Título da mensagem de vitória -->
+                <p>Você é um verdadeiro sobrevivente e associou todas as palavras corretamente.</p> <!-- Texto de parabenização -->
+                <button onclick="resetGame()">Jogar Novamente</button> <!-- Botão para reiniciar o jogo -->
+            </div> <!-- Fim da caixa de conteúdo -->
+        </div> <!-- Fim do container da tela de vitória -->
+
+    </main> <!-- Fim do conteúdo principal -->
+
+    <footer> <!-- Início do rodapé -->
+        <p>Site Criado por: Rafael Ramos</p> <!-- Créditos do site -->
+    </footer> <!-- Fim do rodapé -->
+
+    <script>
+        // Função que permite que um elemento seja solto em outro
+        function allowDrop(ev) {
+            ev.preventDefault(); // Previne o comportamento padrão do navegador, que é não permitir o drop
+        }
+
+        // Função que é chamada quando o usuário começa a arrastar uma palavra
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id); // Armazena o ID do elemento que está sendo arrastado
+        }
+
+        // Função que é chamada quando o usuário solta uma palavra em uma caixa de categoria
+        function drop(ev) {
+            ev.preventDefault(); // Previne o comportamento padrão do navegador (abrir como link ao soltar)
+            var data = ev.dataTransfer.getData("text"); // Pega o ID do elemento que foi arrastado (armazenado na função drag)
+            var draggedElement = document.getElementById(data); // Pega o elemento arrastado usando seu ID
+            var targetElement = ev.target.closest('.category-box'); // Encontra a caixa de categoria mais próxima onde o item foi solto
+            var feedbackMessage = document.getElementById('feedback-message'); // Pega o elemento de feedback
+
+            if (draggedElement && targetElement) { // Verifica se o elemento arrastado e a caixa de destino existem
+                if (draggedElement.dataset.category === targetElement.dataset.category) { // Compara a categoria de dados do elemento arrastado com a da caixa de destino
+                    targetElement.appendChild(draggedElement); // Adiciona a palavra à caixa de categoria correta
+                    draggedElement.style.backgroundColor = '#45a049'; // Muda a cor de fundo para verde (indicando acerto)
+                    draggedElement.style.color = 'white'; // Muda a cor do texto para branco
+                    feedbackMessage.textContent = 'Correto!'; // Exibe mensagem de acerto
+                    feedbackMessage.style.color = '#45a049'; // Cor da mensagem de acerto
+
+                    // --- NOVA LÓGICA ---
+                    checkWinCondition(); // Chama a função para verificar se o jogo terminou após cada jogada correta
+
+                } else {
+                    feedbackMessage.textContent = 'Errado! Tente novamente.'; // Exibe mensagem de erro
+                    feedbackMessage.style.color = '#dc3545'; // Cor da mensagem de erro
+                }
+            }
+        }
+        
+        // --- NOVA FUNÇÃO ---
+        // Função que verifica se o jogador venceu
+        function checkWinCondition() {
+            const wordsContainer = document.getElementById('words-container'); // Pega o container inicial das palavras
+            const winScreen = document.getElementById('win-screen'); // Pega a tela de vitória
+            
+            // Verifica se NÃO existe mais nenhum elemento com a classe 'word-item' dentro do container inicial
+            if (wordsContainer.querySelector('.word-item') === null) {
+                winScreen.style.display = 'flex'; // Se não houver mais palavras, exibe a tela de vitória mudando seu display para 'flex'
+            }
+        }
+
+        // --- NOVA FUNÇÃO ---
+        // Função para reiniciar o jogo
+        function resetGame() {
+            location.reload(); // Simplesmente recarrega a página, que é a forma mais fácil de reiniciar o estado do jogo
+        }
+    </script>
+
+</body>
+</html>
