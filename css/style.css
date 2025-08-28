@@ -205,6 +205,75 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
+/* Media Queries para Responsividade */
+
+/* Telas menores que 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+   header .container {
+       flex-direction: column;
+       text-align: center;
+   }
+
+   header nav ul {
+       flex-direction: column;
+       margin-top: 15px;
+   }
+
+   header nav ul li {
+       margin: 10px 0;
+   }
+
+   .banner2 h1 {
+       font-size: 2.5em;
+   }
+
+   .contato-t {
+       padding: 15px;
+       margin: 0 15px;
+   }
+
+   .forms input[type="text"],
+   .forms input[type="email"],
+   .forms input[type="date"],
+   .forms select,
+   .forms textarea {
+       padding: 10px;
+       font-size: 0.95em;
+   }
+
+   #botao {
+       padding: 12px 20px;
+       font-size: 1em;
+   }
+}
+
+/* Telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+   header .logo img {
+       max-width: 120px;
+   }
+
+   header nav ul li a {
+       font-size: 0.9em;
+   }
+
+   .banner2 {
+       padding: 80px 15px;
+   }
+
+   .banner2 h1 {
+       font-size: 2em;
+   }
+
+   .contato-t h1 {
+       font-size: 1.8em;
+   }
+
+   .forms label {
+       font-size: 0.9em;
+   }
+}
+
  .fonte {
    text-align: justify;
    color: #ffffff;
