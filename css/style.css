@@ -166,7 +166,7 @@ nav ul li a{
  .contato-t h1 {
    color: #000000;
  }
- input[type=text], input[type=date], input[type=email], select {
+ input[type=text], input[type=date], input[type=email], input[type=radio], select, textarea {
    width: 100%;
    padding: 12px 20px;
    margin: 8px 0;
@@ -175,6 +175,19 @@ nav ul li a{
    border-radius: 4px;
    box-sizing: border-box;
 
+ }
+
+
+ .t-forms, label {
+   color: #757375;
+ }
+
+ input[type=range] {
+   width: 100%;
+ }
+
+ .forms {
+   width: 100%;
  }
 
  input[type=submit] {
@@ -311,6 +324,7 @@ input[type=submit]:hover {
    max-width: 300px;
    margin: auto;
    text-align: center;
+   width: 70%;
  }
 
  .card h3{
@@ -360,7 +374,27 @@ input[type=submit]:hover {
    text-align: center;
    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
    margin-top: 5%;
+   overflow-y: auto;
+   max-height: 60vh;
 }
+
+@media (max-width: 935px) {
+   .modal-content {
+      padding: 20px;
+      width: 95%;
+      max-height: 85vh;
+      margin-top: ;
+   }
+}
+
+@media (max-width: 335px) {
+   .modal-content {
+      padding: 20px;
+      width: 95%;
+      max-height: 85vh;
+   }
+}
+
 
 .close-btn {
    margin-top: 20px;
@@ -370,6 +404,75 @@ input[type=submit]:hover {
    color: white;
    border-radius: 6px;
    text-decoration: none;
+}
+
+/*tabela*/
+
+.secao-tabela {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.secao-tabela h1 {
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+.container-tabela {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-tabela table {
+    width: 100%;
+    border-collapse: collapse; 
+    background-color: #757375; 
+    color: #fffdff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.container-tabela thead {
+    background-color: #0a0908; 
+    color: #ffffff;
+}
+
+
+.container-tabela td {
+    padding: 15px 20px;
+    text-align: left;
+    vertical-align: top; 
+}
+
+.container-tabela thead td {
+    font-weight: bold;
+}
+
+.container-tabela tbody tr {
+    border-bottom: 1px solid #595959; 
+}
+
+.container-tabela tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+.container-tabela tbody tr:nth-of-type(even) {
+    background-color: #6a686a;
+}
+
+
+/* --- RESPONSIVIDADE PARA A TABELA --- */
+
+@media (max-width: 768px) {
+    .container-tabela {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .container-tabela table {
+        min-width: 700px;
+    }
 }
 
 .imggaleria img {
@@ -392,6 +495,7 @@ input[type=submit]:hover {
    align-items: center;
    padding: 5%;
    scroll-margin-top: 190px;
+   margin-left: 0%;
 }
 
 @media (max-width: 675px){
@@ -413,138 +517,200 @@ footer {
 
 /* --- ESTILOS PARA A PÁGINA DO JOGO (jogo.html) --- */
 
+.jogo_m {
+   padding-top: 12%; /* Garante espaço para o header fixo */
+}
+
 /* Estiliza a seção principal do jogo */
 #game-section {
-   padding: 40px 20px; /* Adiciona preenchimento interno (vertical e horizontal) */
-   text-align: center; /* Centraliza todo o texto dentro da seção */
-   margin-top: 100px; /* Adiciona uma margem no topo para não ficar colado no cabeçalho fixo */
+   padding: 20px;
+   text-align: center;
 }
 
 /* Estiliza o container de instruções do jogo */
 .game-instructions {
-   margin-bottom: 40px; /* Adiciona uma margem inferior para separar as instruções da área do jogo */
+   margin-bottom: 40px;
 }
 
 /* Estiliza o container principal do jogo */
 .game-area {
-   position: relative; /* Define o posicionamento como relativo. Isso é crucial para que os elementos filhos com 'position: absolute' se posicionem em relação a este container */
-   width: 100%; /* Define a largura para ocupar 100% do espaço disponível */
-   max-width: 900px; /* Define uma largura máxima para não ficar muito grande em telas largas */
-   height: 500px; /* Define uma altura fixa para a área do jogo */
-   margin: 0 auto; /* Centraliza o container horizontalmente */
-   border: 3px solid #0a0908; /* Adiciona uma borda sólida e escura */
-   border-radius: 10px; /* Arredonda as bordas */
-   background-color: #757375; /* Define uma cor de fundo cinza */
+   position: relative; 
+   width: 100%;
+   max-width: 900px;
+   height: 500px;
+   margin: 0 auto;
+   border: 3px solid #0a0908;
+   border-radius: 10px;
+   background-color: #757375;
 }
 
 /* Estiliza o título central do quiz */
 .game-title-container {
-   position: absolute; /* Define o posicionamento como absoluto */
-   top: 50%; /* Posiciona o topo do elemento a 50% da altura do container pai */
-   left: 50%; /* Posiciona a esquerda do elemento a 50% da largura do container pai */
-   transform: translate(-50%, -50%); /* Move o elemento -50% de sua própria largura e altura para centralizá-lo perfeitamente */
-   color: #ffffff; /* Define a cor do texto como branco */
-   text-shadow: 2px 2px 4px #000; /* Adiciona uma sombra ao texto para melhor legibilidade */
+   position: absolute; 
+   top: 50%; 
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #ffffff;
+   text-shadow: 2px 2px 4px #000;
 }
 
 /* Estilo base para todas as caixas de categoria */
 .category-box {
-   position: absolute; /* Define o posicionamento como absoluto, permitindo que sejam colocadas nos cantos da 'game-area' */
-   width: 200px; /* Define a largura da caixa */
-   height: 150px; /* Define a altura da caixa */
-   padding: 10px; /* Adiciona preenchimento interno */
-   border: 2px dashed #ffffff; /* Adiciona uma borda tracejada branca */
-   border-radius: 8px; /* Arredonda as bordas */
-   background-color: rgba(0, 0, 0, 0.3); /* Adiciona um fundo preto semitransparente */
-   display: flex; /* Habilita o Flexbox */
-   flex-direction: column; /* Organiza os itens internos em coluna */
-   align-items: center; /* Centraliza os itens horizontalmente */
-   overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo transbordar */
+   position: absolute;
+   width: 200px; 
+   height: 150px;
+   padding: 10px;
+   border: 2px dashed #ffffff; 
+   border-radius: 8px;
+   background-color: rgba(0, 0, 0, 0.3);
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   overflow-y: auto;
 }
 
 /* Estiliza o título dentro das caixas de categoria */
 .category-box h3 {
-   color: #ffffff; /* Define a cor do texto do título como branco */
-   margin-bottom: 10px; /* Adiciona uma margem inferior */
+   color: #ffffff;
+   margin-bottom: 10px;
 }
 
-/* Posiciona a caixa no canto superior esquerdo */
-.top-left {
-   top: 20px; /* Distância do topo */
-   left: 20px; /* Distância da esquerda */
-}
-
-/* Posiciona a caixa no canto superior direito */
-.top-right {
-   top: 20px; /* Distância do topo */
-   right: 20px; /* Distância da direita */
-}
-
-/* Posiciona a caixa no canto inferior esquerdo */
-.bottom-left {
-   bottom: 20px; /* Distância da base */
-   left: 20px; /* Distância da esquerda */
-}
-
-/* Posiciona a caixa no canto inferior direito */
-.bottom-right {
-   bottom: 20px; /* Distância da base */
-   right: 20px; /* Distância da direita */
-}
+.top-left { top: 20px; left: 20px; }
+.top-right { top: 20px; right: 20px; }
+.bottom-left { bottom: 20px; left: 20px; }
+.bottom-right { bottom: 20px; right: 20px; }
 
 /* Estiliza o container das palavras arrastáveis */
 .words-container {
-   margin-top: 30px; /* Adiciona uma margem superior para separar da área do jogo */
-   display: flex; /* Habilita o Flexbox */
-   flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço */
-   justify-content: center; /* Centraliza os itens horizontalmente */
-   gap: 15px; /* Adiciona um espaçamento entre as palavras */
-   padding: 10px; /* Adiciona preenchimento interno */
+   margin-top: 30px;
+   display: flex;
+   flex-wrap: wrap; 
+   justify-content: center;
+   gap: 15px; 
+   padding: 10px;
 }
 
 /* Estilo para cada palavra arrastável */
 .word-item {
-   padding: 10px 20px; /* Adiciona preenchimento interno */
-   background-color: #fffdff; /* Define a cor de fundo como branco */
-   color: #0a0908; /* Define a cor do texto como preto */
-   border: 1px solid #dddadd; /* Adiciona uma borda cinza claro */
-   border-radius: 5px; /* Arredonda as bordas */
-   cursor: grab; /* Muda o cursor para indicar que o item é arrastável */
-   transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
-   margin: 0; /* Remove margens padrão do parágrafo */
-   font-weight: bold; /* Deixa o texto em negrito */
+   padding: 10px 20px;
+   background-color: #fffdff;
+   color: #0a0908; 
+   border: 1px solid #dddadd;
+   border-radius: 5px;
+   cursor: grab;
+   transition: background-color 0.3s;
+   margin: 0; 
+   font-weight: bold;
 }
 
 /* Estiliza a mensagem de feedback (certo/errado) */
 .feedback-message {
-   margin-top: 20px; /* Adiciona uma margem superior */
-   font-size: 1.2em; /* Aumenta o tamanho da fonte */
-   font-weight: bold; /* Deixa o texto em negrito */
-   height: 30px; /* Define uma altura fixa para evitar que o layout pule quando a mensagem aparece */
+   margin-top: 20px;
+   font-size: 1.2em;
+   font-weight: bold;
+   height: 30px; 
 }
 
+/* Seleciona um item de palavra (.word-item) que está DENTRO de uma caixa de categoria (.category-box) */
+.category-box .word-item {
+   margin-bottom: 8px;
+   cursor: default;
+   width: 95%;
+}
+
+/* --- ESTILOS PARA A TELA DE VITÓRIA --- */
+.win-screen-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.85);
+   z-index: 2000;
+   display: none;
+   justify-content: center;
+   align-items: center;
+}
+
+.win-content {
+   background-color: #fffdff;
+   color: #0a0908;
+   padding: 30px 50px;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+   max-width: 90%;
+}
+
+.win-content h2 {
+   color: #0a0908;
+   margin-bottom: 15px;
+}
+
+.win-content p {
+   color: #595959;
+   margin-bottom: 30px;
+}
+
+.win-content button {
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   padding: 12px 25px;
+   font-size: 1em;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.win-content button:hover {
+   background-color: #45a049;
+}
+
+/* --- SEÇÃO DE RESPONSIVIDADE --- */
+
+@media (max-width: 675px){
+    header .container, .sobre-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul{
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    #inicio{
+        margin-top: 160px;
+    }
+
+    .jogo_m {
+        padding-top: 180px; /* Aumenta o espaço para o header que ficou maior */
+    }
+
+}
 
 /* --- RESPONSIVIDADE PARA O JOGO --- */
-
 /* Media Query para telas com largura máxima de 768px (tablets e celulares) */
-@media (max-width: 768px) {
-   /* Ajusta a área do jogo para um layout vertical */
-   .game-area {
-       position: static; /* Remove o posicionamento relativo, pois não usaremos 'absolute' nos filhos */
+@media (max-width: 668px) {
+    /* Ajusta a área do jogo para um layout vertical */
+    .game-area {
+       position: static; /* Remove o posicionamento para que flua normalmente */
        height: auto; /* A altura se ajustará ao conteúdo */
-       display: flex; /* Habilita o Flexbox */
-       flex-direction: column; /* Organiza os itens em coluna */
+       display: flex;
+       flex-direction: column; /* Organiza os itens (as caixas) em coluna */
        gap: 20px; /* Adiciona espaço entre as caixas de categoria */
-       border: none; /* Remove a borda principal */
-       background-color: transparent; /* Remove o fundo */
+       border: none; /* Remove a borda principal da área */
+       background-color: transparent; /* Remove o fundo da área */
+       margin-top: 10%;
    }
 
    /* Remove o posicionamento absoluto das caixas de categoria */
    .category-box {
        position: static; /* Remove o posicionamento absoluto */
        width: 100%; /* Faz com que ocupem a largura total */
-       height: auto; /* A altura se ajustará ao conteúdo */
-       min-height: 120px; /* Define uma altura mínima */
+       height: auto;
+       min-height: 120px; /* Define uma altura mínima para receber os itens */
        border-style: solid; /* Muda a borda para sólida para melhor visualização */
    }
 
@@ -553,76 +719,9 @@ footer {
        display: none; /* Esconde o elemento */
    }
 
-   .jogo_m {
-      margin-top: 10%;
+   #game-section h1 {
+       margin-left: 0; /* Centraliza o título do jogo */
+       margin-top: 20%;
    }
-}
 
-/* --- NOVA REGRA PARA ESPAÇAMENTO DAS PALAVRAS NO CONTAINER --- */
-
-/* Seleciona um item de palavra (.word-item) que está DENTRO de uma caixa de categoria (.category-box) */
-.category-box .word-item {
-   margin-bottom: 8px; /* Adiciona um espaçamento inferior de 8px entre as palavras que foram colocadas na caixa */
-   cursor: default; /* Muda o cursor para o padrão, pois a palavra não é mais arrastável de sua posição final */
-   width: 95%; /* Define a largura para quase 100% da caixa para manter o alinhamento central */
-}
-
-.jogo_m {
-   margin-top: 10%;
-}
-
-/* --- ESTILOS PARA A TELA DE VITÓRIA --- */
-
-/* Estiliza o overlay (a camada escura que cobre a página) */
-.win-screen-overlay {
-   position: fixed; /* Fixa o elemento na tela, mesmo com rolagem */
-   top: 0; /* Alinha no topo */
-   left: 0; /* Alinha na esquerda */
-   width: 100%; /* Ocupa 100% da largura da tela */
-   height: 100%; /* Ocupa 100% da altura da tela */
-   background-color: rgba(0, 0, 0, 0.85); /* Fundo preto com 85% de opacidade */
-   z-index: 2000; /* Garante que a tela fique por cima de todos os outros elementos */
-   display: none; /* ESCONDE A TELA POR PADRÃO. O JavaScript mudará para 'flex' para exibi-la */
-   justify-content: center; /* Centraliza o conteúdo filho (a caixa branca) horizontalmente */
-   align-items: center; /* Centraliza o conteúdo filho (a caixa branca) verticalmente */
-}
-
-/* Estiliza a caixa de conteúdo branca no centro da tela de vitória */
-.win-content {
-   background-color: #fffdff; /* Cor de fundo branca */
-   color: #0a0908; /* Cor do texto preta */
-   padding: 30px 50px; /* Adiciona preenchimento interno */
-   border-radius: 10px; /* Arredonda as bordas */
-   text-align: center; /* Centraliza o texto */
-   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para dar profundidade */
-   max-width: 90%; /* Define uma largura máxima para não ficar muito grande em telas largas */
-}
-
-/* Estiliza o título "Parabéns!" */
-.win-content h2 {
-   color: #0a0908; /* Garante que a cor do texto do h2 seja preta */
-   margin-bottom: 15px; /* Adiciona uma margem inferior */
-}
-
-/* Estiliza o texto de parabenização */
-.win-content p {
-   color: #595959; /* Garante que a cor do texto seja cinza */
-   margin-bottom: 30px; /* Adiciona uma margem inferior para separar do botão */
-}
-
-/* Estiliza o botão "Jogar Novamente" */
-.win-content button {
-   background-color: #4CAF50; /* Fundo verde, o mesmo do formulário de contato */
-   color: white; /* Texto branco */
-   border: none; /* Remove a borda padrão */
-   padding: 12px 25px; /* Adiciona preenchimento interno */
-   font-size: 1em; /* Tamanho da fonte */
-   border-radius: 5px; /* Arredonda as bordas */
-   cursor: pointer; /* Muda o cursor para indicar que é clicável */
-   transition: background-color 0.3s; /* Adiciona uma transição suave para o efeito hover */
-}
-
-/* Efeito hover para o botão "Jogar Novamente" */
-.win-content button:hover {
-   background-color: #45a049; /* Escurece o fundo verde ao passar o mouse */
 }

@@ -14,7 +14,7 @@
     <header>
         <div class="container">
             <div class="logo">
-               <img class="logo" src="img/tlou_LOGO.png" alt="Logo do The last of Us">
+                <a href="index.html"><img class="logo" src="img/tlou_LOGO.png" alt="Logo do The last of Us"></a>
             </div>
             <nav>
                 <ul>
@@ -39,31 +39,42 @@
                 <h1>Entre em contato conosco</h1>
                 <div class="forms">   
                     <form action="https://formsubmit.co/rafael.ramosaraujo1@gmail.com" method="POST">
-                    <label for="fname">Digite seu nome:</label><br>
-                    <input type="text" id="fname" name="fname" value="Nome"><br>
-                    <label for="lname">Digite seu sobrenome:</label><br>
-                    <input type="text" id="lname" name="lname" value="Sobrenome"><br><br>
+                        <label for="fname">Digite seu nome:</label><br>
+                        <input type="text" id="fname" name="fname" value="Nome"><br>
+                        <label for="lname">Digite seu sobrenome:</label><br>
+                        <input type="text" id="lname" name="lname" value="Sobrenome"><br><br>
 
-                    <label for="birthday">Digite sua data de nascimento:</label><br>
-                    <input type="date" id="datanas" name="datanas"><br>
+                        <label for="birthday">Digite sua data de nascimento:</label><br>
+                        <input type="date" id="datanas" name="datanas"><br>
 
-                    <label for="email">Digite o seu email:</label>
-                    <input type="email" id="email" name="email">
+                        <label for="email">Digite o seu email:</label>
+                        <input type="email" id="email" name="email">
 
-                    <label for="pais">Escoha seu pais:</label>
-                    <select name="Pais" id="pais">
-                        <option value="brasil">Brasil</option>
-                        <option value="eua">EUA</option>
-                        <option value="japao">Japão</option>
-                        <option value="mexico">México</option>
-                        <option value="marrocos">Marrocos</option>
-                    </select>
+                        <label for="pais">Escoha seu pais:</label>
+                        <select name="Pais" id="pais">
+                            <option value="brasil">Brasil</option>
+                            <option value="eua">EUA</option>
+                            <option value="japao">Japão</option>
+                            <option value="mexico">México</option>
+                            <option value="marrocos">Marrocos</option>
+                        </select>
 
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="20"></textarea>
-                    
+                        <label for="nota">Que nota você dá para o site? (0-10):</label><br>
+                        <input type="range" id="nota" name="nota" min="0" max="10" value="5">
 
-                    <input type="submit" value="Enviar">
+                        <label for="person">Qual é o seu personagem favorito?</label><br>
+                        <input type="radio" id="ellie" name="person" value="ellie"> Ellie<br>
+                        <input type="radio" id="joel" name="person" value="joel"> Joel<br>
+                        <input type="radio" id="abby" name="person" value="abby"> Abby<br>
+                        <input type="radio" id="dina" name="person" value="dina"> Dina
+
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="20"></textarea>
+                        
+
+                        <input type="submit" value="Enviar" id="botao">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://https://rafaelramosaraujo.github.io/site/enviadosucesso.html">
                     </form>
                 </div> 
 
