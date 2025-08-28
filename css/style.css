@@ -209,20 +209,6 @@ input[type=submit]:hover {
 
 /* Telas menores que 768px (tablets e smartphones) */
 @media (max-width: 768px) {
-   header .container {
-       flex-direction: column;
-       text-align: center;
-   }
-
-   header nav ul {
-       flex-direction: column;
-       margin-top: 15px;
-   }
-
-   header nav ul li {
-       margin: 10px 0;
-   }
-
    .banner2 h1 {
        font-size: 2.5em;
    }
@@ -249,14 +235,6 @@ input[type=submit]:hover {
 
 /* Telas menores que 480px (smartphones) */
 @media (max-width: 480px) {
-   header .logo img {
-       max-width: 120px;
-   }
-
-   header nav ul li a {
-       font-size: 0.9em;
-   }
-
    .banner2 {
        padding: 80px 15px;
    }
